@@ -1,0 +1,126 @@
+
+
+body{
+    background-color: #A2A2A2;
+}
+
+
+/* fuentes para la pagina NO SE MUEVA */
+@font-face {
+  font-family: "Azonix";
+  src: url("fonts/Azonix.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Passager";
+  src: url("fonts/Passager.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PowellAndGeary";
+  src: url("fonts/Powell\ and\ Geary.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*titulos importantes*/
+
+h1 {
+    font-family: "Azonix", sans-serif;
+    font-size: 50px;
+    color: #C0D594 ;
+    text-align: center;
+    margin-top: 50px;
+}
+
+div.frase{
+    background-color: #527233;
+    font-family: "PowellAndGeary", sans-serif;
+    font-size: 20px;
+    color: #FFFFFF ;   
+    text-align: center;
+    padding: 1px;
+
+}
+
+/*intento de barra plegable OJALA SALGA BIEN*/
+
+.barPle{
+  background-color: white;
+  display: flex;
+  justify-content:left;
+}
+
+.barPItem{
+  position: relative;
+  padding: 15px 25px;
+  color: black;
+  cursor: pointer;
+}
+
+/*efecto cuando pase el mouse*/
+.barPItem:hover{
+  background-color: #333;
+}
+
+.interior{
+  display: none;
+  position: absolute;
+  top:100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 180px;
+}
+
+/*estilo de los textos adentro de ventana*/
+.interior a{
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+}
+
+/*muestra de la ventana*/
+.barPItem:hover .interior{
+  display: block;
+}
+
+.barPItem a:hover{
+  background-color: #f0f0f0;
+}
+
+/*pruebas de imagenes*/
+
+#modelo{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#convencer{
+  font-family: passager, sans-serif;
+  font-size: 15px;
+  color:black;
+  text-align: left;
+  margin-top: -250px;
+  margin-left: 60%;
+}
+
+#mejoras img {
+  display: inline-block;
+  justify-content: center;
+  margin-top: 15px;
+  width: 350px;
+  height: 350px;
+}
+
+#mejoras{
+  text-align: center;
+  margin-top: 350px;
+}
