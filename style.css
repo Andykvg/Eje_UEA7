@@ -1,9 +1,7 @@
 
-
 body{
-    background-color: #A2A2A2;
+    background-color: white;
 }
-
 
 /* fuentes para la pagina NO SE MUEVA */
 @font-face {
@@ -53,7 +51,7 @@ div.frase{
 .barPle{
   background-color: white;
   display: flex;
-  justify-content:left;
+  justify-content:center;
 }
 
 .barPItem{
@@ -98,7 +96,7 @@ div.frase{
 /*pruebas de imagenes*/
 
 #modelo{
-  margin-left: auto;
+  margin-left: 50px;
   margin-right: auto;
   width: 50%;
 }
@@ -108,8 +106,23 @@ div.frase{
   font-size: 15px;
   color:black;
   text-align: left;
-  margin-top: -250px;
+  margin-top: -290px;
   margin-left: 60%;
+}
+
+/*imagenes de algunos resultados*/
+#tendencias img {
+  display: inline-block;
+  justify-content: center;
+  margin-top: 15px;
+  width: 350px;
+  height: 350px;
+}
+
+#tendencias{
+  font-family: PowellAndGeary, sans-serif;
+  text-align: center;
+  margin-top: 200px;
 }
 
 #mejoras img {
@@ -121,6 +134,42 @@ div.frase{
 }
 
 #mejoras{
+  font-family: PowellAndGeary, sans-serif;
   text-align: center;
-  margin-top: 350px;
+  margin-top: 150px;
+}
+
+/*Imagen del chatbot*/
+
+.chatBot {
+  background-color: #527233;
+  font-family: "Azonix", sans-serif;
+  font-size: 15px;
+  color: #FFFFFF;
+  display: flex;                  /* activa flexbox */
+  justify-content: space-between;   /* separa texto y botón */
+  align-items: center;            /* centra verticalmente */
+  padding: 25px;
+  margin-top: 100px;
+}
+
+/* texto */
+.chatBot .textBot {
+  text-align: center;
+}
+
+/* bloque rojo */
+#botImg {
+  background-color: white;
+  color: white;
+  font-weight: bold;
+  padding: 30px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* efecto al pasar el mouse */
+#botImg:hover {
+  background-color:darkgray;
 }
