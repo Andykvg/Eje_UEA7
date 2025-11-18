@@ -1,6 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
-    background-color: white;
+  background-color: white;
 }
 
 /* fuentes para la pagina NO SE MUEVA */
@@ -10,7 +15,6 @@ body{
   font-weight: normal;
   font-style: normal;
 }
-
 
 @font-face {
   font-family: "Passager";
@@ -26,32 +30,82 @@ body{
   font-style: normal;
 }
 
+div.frase{
+  background-color: #527233;
+  font-family: "PowellAndGeary", sans-serif;
+  font-size: 20px;
+  color: #FFFFFF ;   
+  text-align: center;
+  padding: 1px;
+
+}
+
+/*Carrusel de imagenes*/ 
+/*contenedor de las imagenes este da el lugar en donde van a estar TEN CUIDADO SI LE MUEVES EL HEIGHT !!!! */
+.carrusel{
+  margin-top: 1px;
+  position: relative;
+  width: 100vw; /*para que reaccione de forma horizontal el monitor */
+  /*muevele con CUIDADO, eh eh eh que haces que le quieres mover */
+  height: 300px;
+  overflow: hidden;
+}
+
+/* Para que las imagenes se desplacen sin problema*/
+
+.slides{
+  display: flex;
+  width: 100%; /*para que se respete el 100%*/
+  height: 100%;
+  animation: slide 22s infinite;
+}
+
+.slides img{
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*para que no se deforme la imagen*/
+}
+
+/*la animacion de las imagenes del carrusel QUE SE NOTEN LAS FALLAS ORTOGRAFICAS EL DIABLO AJJAJ */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }         /* pausa imagen 1 */
+  25% { transform: translateX(-100%); }    /* transición a imagen 2 */
+  45% { transform: translateX(-100%); }    /* pausa imagen 2 */
+  50% { transform: translateX(-200%); }    /* transición a imagen 3 */
+  70% { transform: translateX(-200%); }    /* pausa imagen 3 */
+  75% { transform: translateX(0); }        /* vuelve a la primera */
+  100% { transform: translateX(0); }       /* pausa final antes del reinicio */
+}
+
 /*titulos importantes*/
 
 h1 {
-    font-family: "Azonix", sans-serif;
-    font-size: 50px;
-    color: #C0D594 ;
-    text-align: center;
-    margin-top: 50px;
+  position: absolute;
+  top: 20px; /* distancia desde arriba del carrusel */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Azonix", sans-serif;
+  font-size: 50px;
+  color: #C0D594;
+  text-align: center;
+  z-index: 10;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7); /* opcional para resaltar sobre la imagen */
 }
 
-div.frase{
-    background-color: #527233;
-    font-family: "PowellAndGeary", sans-serif;
-    font-size: 20px;
-    color: #FFFFFF ;   
-    text-align: center;
-    padding: 1px;
-
-}
-
-/*intento de barra plegable OJALA SALGA BIEN*/
+/*intento de barra plegable OJALA SALGA BIEN, pdt si funciona tu YUPI*/
 
 .barPle{
-  background-color: white;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  /*background-color: rgba(255, 255, 255, 0.8);  se sigue considerando */
   display: flex;
   justify-content:center;
+  z-index: 15; /* mayor que el carrusel que esta encima de que */
+  padding: 10px 0;
 }
 
 .barPItem{
@@ -63,7 +117,7 @@ div.frase{
 
 /*efecto cuando pase el mouse*/
 .barPItem:hover{
-  background-color: #333;
+  background-color: #f1f1f13c
 }
 
 .interior{
@@ -93,50 +147,76 @@ div.frase{
   background-color: #f0f0f0;
 }
 
-/*pruebas de imagenes*/
+/*Muestra de la modelo con imagen y texto */
 
-#modelo{
-  margin-left: 50px;
-  margin-right: auto;
-  width: 50%;
+.seccion-muestra {
+  display: flex; /* coloca imagen y texto lado a lado */
+  align-items: center; /* centra verticalmente */
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-#convencer{
+.img-muestras {
+  width: 45%; /* tamaño de la imagen */
+  max-width: 600px;
+  height: auto;
+}
+
+.texto-muestras {
+  width: 40%;
+  text-align: right;
   font-family: passager, sans-serif;
-  font-size: 15px;
-  color:black;
-  text-align: left;
-  margin-top: -290px;
-  margin-left: 60%;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
-/*imagenes de algunos resultados*/
-#tendencias img {
-  display: inline-block;
+
+/*Imagenes de las tendencias */
+
+.tendencias-F {
+  display: flex;
   justify-content: center;
-  margin-top: 15px;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 20px; /* espacio entre imágenes */
+  margin-top: 20px;
+}
+
+.tendencias-F img {
   width: 350px;
   height: 350px;
+  object-fit: cover;
 }
 
-#tendencias{
+/*texto de este bloque de tendecias*/
+.tendencias-P{
   font-family: PowellAndGeary, sans-serif;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
-#mejoras img {
-  display: inline-block;
+/*Imagenes del bloque de mejoras*/
+.mejoras-F {
+  display: flex;
   justify-content: center;
-  margin-top: 15px;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 20px; /* espacio entre imágenes */
+  margin-top: 20px;
+}
+
+.mejoras-F img {
   width: 350px;
   height: 350px;
+  object-fit: cover;
 }
-
-#mejoras{
+/*texto de este bloque de mejoras*/
+.mejoras-P{ 
   font-family: PowellAndGeary, sans-serif;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 80px;
 }
 
 /*Imagen del chatbot*/
