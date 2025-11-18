@@ -1,3 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-    background-color: #527233;
+  background-color: #c0d594;
+}
+
+/* fuentes para la pagina NO SE MUEVA */
+@font-face {
+  font-family: "Azonix";
+  src: url("fonts/Azonix.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Passager";
+  src: url("fonts/Passager.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PowellAndGeary";
+  src: url("fonts/Powell\ and\ Geary.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contenedor{
+  margin-top: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ima{
+  padding: 2px;
+  width: 100vw;
+  height: 400px;
+  overflow: hidden;
+}
+
+.ima img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.C-lienzo{
+  position: relative;
+  display: flex;
+  padding-top: 40px;
+  margin-top: -150px; 
+  background-color: transparent;
+  justify-content: center;
+}
+
+.lienzo {
+  background-color: white;
+  width: 80%;        /* para que esté centrado pero no sea tan ancho */
+  padding: 15px
+  border-radius: 10px;
+  justify-content: justify;
+}
+
+
+/*Titulos*/
+
+h1{
+  font-family:PowellAndGeary, sans-serif;
+  font-size:25px;
+  margin-top: 25px;
+  padding: 15px 60px 0 60px; /*top, rigth, bootom, left*/
+  text-align: left;
+}
+
+p{
+  font-family: Azonix, sans-serif;
+  font-size: 18px;
+  padding: 15px 60px 15px 60px;
+  text-align: justify;
 }

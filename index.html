@@ -5,65 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista Prueba</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-
-    <h1> Helixion </h1>
 
     <div class="frase">
         <p> Somos tu lugar para ser mejor </p>
     </div>
 
-    <!--intento de barra plegable-->
-    <div class="barPle">
-        <!--pestaña 1-->
-        <div class="barPItem">
-            Conocenos
-            <!--contenido que se va desplegar-->
-            <div class="interior">
-                <a href="#">Delineadores</a>
-                <a href="#">Sombras</a>
-             </div>
-        </div>
-
-        <!--pestaña 2-->
-        <div class="barPItem">
-             Catalogo
-             <div class="interior">
-                <a href="#">Imagenes</a>
-                <a href="Casos.html">Casos</a>
-            </div>
-        </div>
-    </div>
-    <br>
-
-    <img id= "modelo" src="assets/prueba1.jpg"> 
+    <!--Carrusel de imagenes Muestra  ☻ -->
     
-    <div id="convencer">
-        <p> Podemos darte las mejoras que te hagan mas optimo y mejor </p>
-        <br>
-        <p>Puedes elegir varias mejoras desde lo humano a lo bestial</p>
-        <p>Confia en nosostros, SABEMOS LO QUE NECESITAS </p>
+    <div class = "carrusel">
+
+        <h1> Helixion </h1>
+
+        <!--intento de barra plegable-->
+        <div class="barPle">
+            <!--pestaña 1-->
+            <div class="barPItem">
+                Conocenos
+                <!--contenido que se va desplegar-->
+                <div class="interior">
+                    <a href="NH.html">Nuesta historia</a>
+                    <a href="QS.html">Quienes somos</a>
+                </div>
+            </div>
+
+            <!--pestaña 2-->
+            <div class="barPItem">
+                Catalogo
+                <div class="interior">
+                    <a href="#">Imagenes</a>
+                    <a href="Casos.html">Casos</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Las imagenes internas del carrusel-->
+        <div class = "slides">
+            <img src="assets/car.jpg" alt="">
+            <img src="assets/prueba1.jpg" alt="">
+            <img src="assets/shark.jpg" alt="">
+        </div>
 
     </div>
 
+    <!--Fin del carrusel-->
     <br>
 
-    <div id="tendencias">
-        <p>Tendencias</p>
-        <img src="assets/m1.jpg" alt="">
-        <img src="assets/m2.jpg" alt="">
-        <img src="assets/m3.jpg" alt="">
-        <img src="assets/m4.jpg" alt="">
+    <!--Modelo y mensaje de la empresa-->
+
+    <div class="seccion-muestra">
+        <img src="assets/prueba1.jpg" alt="muestras" class="img-muestras">
+
+        <div class="texto-muestras">
+            <p>PODEMOS DARTE LAS MEJORAS QUE TE HAGAN MÁS ÓPTIMO Y MEJOR</p>
+            <p>PUEDES ELEGIR VARIAS MEJORAS DESDE LO HUMANO A LO BESTIAL</p>
+            <p>CONFÍA EN NOSOTROS, SABEMOS LO QUE NECESITAS</p>
+        </div>
     </div>
 
-    <div id="mejoras">
-        <p>Nuevas mejoras</p>
-        <img src="assets/m1.jpg" alt="">
-        <img src="assets/m2.jpg" alt="">
-        <img src="assets/m3.jpg" alt="">
-        <img src="assets/m4.jpg" alt="">
+    <!--Empieza las imagenes de los productos-->
+
+    <div class="tendencias">
+        
+        <div class="tendencias-P">
+            <p>Tendencias</p>
+        </div>
+
+        <div class="tendencias-F">
+            <img src="assets/m1.jpg" alt="">
+            <img src="assets/m2.jpg" alt="">
+            <img src="assets/m3.jpg" alt="">
+            <img src="assets/m4.jpg" alt="">
+        </div>
+        
+    </div>
+
+    <div class="mejoras">
+
+        <div class="mejoras-P">
+            <p>Nuevas mejoras</p>
+        </div>
+
+        <div class="mejoras-F">
+            <img src="assets/m1.jpg" alt="">
+            <img src="assets/m2.jpg" alt="">
+            <img src="assets/m3.jpg" alt="">
+            <img src="assets/m4.jpg" alt="">
+        </div>
+
     </div>
 
 
@@ -71,6 +104,7 @@
     <!-- secciones de los cambios que se pueden realizar a realizar con imagenes muestra ???-->
 
 
+    <!---->
     <!--Div para mandarlos con el chat bot de la empresa -->
     
     <div class="chatBot">
@@ -81,7 +115,7 @@
         </div>
     
         <div id="botImg">
-            <a href="ChatBot.html">Asesor</a>
+            <a href="ChatB.html">Asesor</a>
         </div>
     </div>
     
