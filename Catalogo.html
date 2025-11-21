@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <!--Catalogo de imagens por medio de divs, quien sabe como lo hare-->
+    <!--INSPIRATE de los catalos de ford -->
+
+    <div class="titulos">
+        <div class="cabeza">
+            <h1>Hybrigen</h1>
+            <br>
+
+            <p> Ofertas disponibles con cotizacion al ****** </p>
+
+        </div>
+    </div>
+
+    <!--imaganes en paneo CREO!!-->
+    <!--Que quiero hacer ?? Pus una linea de 3 imagenes con su nombre abajo y que al abrirla se abra una ficha y tenga texto ☻ -->
+
+    <div class="PImagenesC">
+
+        <div class="imagC">
+
+            <!--division por bloques para las imagenes y los textos-->
+            <div class="Cat1" onclick="openPanel(this)">
+                <img src="assets/m1.jpg" alt="">
+                <p class="info"> hola tonotos</p>
+            </div>
+
+            <div class="Cat2" onclick="openPanel(this)">
+                <img src="assets/m1.jpg" alt="">
+                <p class="info"> jum jum jum</p>
+            </div>
+
+            <div class="Cat3" onclick="openPanel(this)">
+                <img src="assets/m1.jpg" alt="">
+                <p class="info"> jum jum </p>
+            </div>
+
+        </div>
+
+        <!--para las segundas imagenes ☺-->
+
+        <div class="imagC">
+
+            <!--division por bloques para las imagenes y los textos-->
+            <div class="Cat1" onclick="openPanel(this)">
+                <img src="assets/m1.jpg" alt="">
+                <p class="info"> jum jum jum</p>
+            </div>
+
+            <div class="Cat2" onclick="openPanel(this)">
+                <img src="assets/m1.jpg" alt="">
+                <p class="info"> jum jum jum </p>
+            </div>
+
+            <div class="Cat3" onclick="openPanel(this)">
+                <img src="assets/m1.jpg" alt="">
+                <p class="info"> jum jum jus</p>
+            </div>
+
+        </div>
+
+
+        <div id="panel" class="panel">
+            <button onclick="closePanel()">X</button>
+            <p id="panelText"></p>
+        </div>
+    </div>
+
+    <br>
+
+    
+    <!--jajaj lol se me olvido-->
+    <script src="script.js"></script>
+</body>
+</html>
