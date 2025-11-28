@@ -1,7 +1,11 @@
+
+/*ENTRAN LAS DEMAS PAGINAS, QS, NH, CASOS, CATA, CHAT*/
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body{
@@ -9,6 +13,7 @@ body{
 }
 
 /* fuentes para la pagina NO SE MUEVA */
+
 @font-face {
   font-family: "Azonix";
   src: url("fonts/Azonix.otf") format("opentype");
@@ -57,7 +62,7 @@ h1 {
 
 .barPle{
   position: absolute;
-  top: 90px;
+  top: 110px;
   left: 0;
   width: 100%;
   /*background-color: rgba(255, 255, 255, 0.8);  se sigue considerando */
@@ -124,7 +129,7 @@ h1 {
 .lienzo {
   background-color: white;
   width: 80%;        /* para que esté centrado pero no sea tan ancho */
-  padding: 15px
+  padding: 15px;
   border-radius: 5px;
   justify-content: justify;
 }
@@ -175,8 +180,8 @@ p{
 }
 
 
-.PImagenesC {
-  margin-top: 20px;
+.PImagenesC {  
+  padding: 10px;
 }
 
 .imagC {
@@ -192,6 +197,23 @@ p{
   width: 350px;
   height: 350px;
   object-fit: cover;  
+}
+
+/*texto catalogo*/
+.textoC{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 20px; /* espacio entre imágenes */
+  margin-top: 20px;
+}
+.textCa{
+  font-family: PowellAndGeary, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 25px;
 }
 
 /*Panel de las imagenes del catalogo ☺ */
