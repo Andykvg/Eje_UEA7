@@ -129,7 +129,7 @@ h1 {
 .lienzo {
   background-color: white;
   width: 80%;        /* para que esté centrado pero no sea tan ancho */
-  padding: 15px
+  padding: 15px;
   border-radius: 5px;
   justify-content: justify;
 }
