@@ -1,3 +1,6 @@
+
+/*RESPONDE UNICAMENTE AL INDEX*/
+
 *{
   margin: 0;
   padding: 0;
@@ -104,7 +107,7 @@ h1 {
 
 .barPle{
   position: absolute;
-  top: 65px;
+  top: 85px;
   left: 0;
   width: 100%;
   /*background-color: rgba(255, 255, 255, 0.8);  se sigue considerando */
@@ -123,7 +126,7 @@ h1 {
 
 .barPItem a{
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 /*efecto cuando pase el mouse*/
@@ -164,6 +167,7 @@ h1 {
   width: 45%; /* tamaño de la imagen */
   max-width: 600px;
   height: auto;
+  margin-left: 80px;
 }
 
 .texto-muestras {
@@ -280,4 +284,22 @@ h1 {
 /* efecto al pasar el mouse */
 #botImg:hover {
   background-color:#e1f5cd91;
+}
+
+
+/*para el pie de pagina de la empresa wuiiii*/
+
+footer{
+  background-color:  #446720bf;
+  align-items: center;
+}
+
+.footerP{
+  text-align: justify;
+  font-size: 15px;
+  padding: 35px;
+  margin-left: 60px;
+  color: white;
+  font-family: saxmono, sans-serif;
+
 }

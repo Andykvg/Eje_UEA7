@@ -15,8 +15,43 @@
     </script>
     <script src="https://cdn-app.continual.ly/js/embed/continually-embed.latest.min.js"></script>
 
+    <!--NO SE BORRA, sino ya no se presentan el chat bot en pantalla completa-->
     <div id="continually-container"> </div>
 
+    <!--experimentacion con lectura de audio por medio de observacion -->
+    <script>
+        const audios = [
+        document.getElementById("audio1"),
+        document.getElementById("audio2"),
+        document.getElementById("audio3")
+    ];
+
+    let index = 0; // para saber qué audio va
+
+    // Función para reproducir el siguiente audio
+    function playNextAudio() {
+        if (index < audios.length) {
+            audios[index].currentTime = 0;
+            audios[index].play();
+            index++;
+        }
+    }
+
+    // Observador que detecta mensajes nuevos del chatbot Continually
+    const observer = new MutationObserver(() => {
+        // Cambiar selector si Continually usa otro
+        const mensajes = document.querySelectorAll(".cly-message");
+
+        if (mensajes.length > 0) {
+            playNextAudio();
+        }
+    });
+
+    observer.observe(document.body, { 
+        childList: true, 
+        subtree: true 
+    });
+    </script>
 </body>
 
 </html>
