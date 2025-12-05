@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagenes</title>
+    <title>Catalogo</title>
     <link rel="stylesheet" href="style2.css">
 
 </head>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="barPItem">
-            <a href="Casos.html">Foro</a>
+            <a href="foro.html">Foro</a>
         </div>
 
         <div class="barPItem">
@@ -36,7 +36,7 @@
 
     <div class= "contenedor">
         <div class="ima">
-            <img src="assets/ase1.png" alt="">
+            <img src="assets/imagenes/ase1.png" alt="">
         </div>
     </div>
 
@@ -45,12 +45,29 @@
 
     <div class="C-lienzo">
 
-        <div class="lienzo">
-            <h2>Catalogo</h1>
-            <br>
+        <div class="lienzom">
+            <h2>Catalogo</h2>
             <br>
         </div>
 
+        <br>
+
+    </div>
+
+
+    <div class="preciosCat">
+        <br>
+        <p>Tus creditos son importantes por lo cual siempre te asesoramos...</p>
+        <p>En nuestra sociedad, tu hibridación no es un simple deseo: es una necesidad cuidadosamente medida. Tu presencia define espacios, y cada rasgo que portas habla por ti antes de que pronuncies una palabra. Por ello, elegir la fusión que mejor se alinee contigo —y con tus créditos— es un acto crucial. Tu imagen es un territorio que no puede dejarse al azar. Existen múltiples hibridaciones, diseñadas para responder a lo que eres, a lo que proyectas y a lo que el entorno espera de ti. Todos requerimos una transformación que dialogue con nuestro lugar en el mundo, una forma que nos complete, nos eleve… o nos recuerde nuestros límites.El animal que selecciones será bello o será útil. Será ornamento o será herramienta. Será tu reflejo más profundo o tu armadura más visible.
+        
+        <p>Adéntrate en este catálogo y elige la criatura que aguarda para fundirse contigo. Tu nuevo “look” no solo se verá: se impondrá.</p>
+
+    </div>
+
+    <div class= "CatLienzo">
+        <div class="CatlienzoBack">
+            <p>De 350,000 creditos en adelante ...</p>
+        </div>
     </div>
         
 
@@ -60,50 +77,60 @@
 
             <!--division por bloques para las imagenes y los textos-->
             <div class="Cat1" onclick="openPanel(this)">
-                <img src="assets/m3.jpg" alt="">
+                <img src="assets/imagenes/m3.jpg" alt="">
                 <p class="info"> hola tonotos</p>
             </div>
 
             <div class="Cat2" onclick="openPanel(this)">
-                <img src="assets/m2.jpg" alt="">
+                <img src="assets/imagenes/m2.jpg" alt="">
                 <p class="info"> jum jum jum</p>
             </div>
 
             <div class="Cat3" onclick="openPanel(this)">
-                <img src="assets/m5.png" alt="">
+                <img src="assets/imagenes/m5.png" alt="">
                 <p class="info"> jum jum </p>
             </div>
 
         </div>
 
+        <br>
         <!--para las segundas imagenes ☺-->
 
+        <div class= "CatLienzo">
+            <div class="CatlienzoBack">
+                <p>De 350,000 creditos en adelante ...</p>
+            </div>
+        </div>
 
         <div class="imagC">
 
             <!--division por bloques para las imagenes y los textos-->
             <div class="Cat1" onclick="openPanel(this)">
-                <img src="assets/m1.jpg" alt="">
+                <img src="assets/imagenes/m1.jpg" alt="">
                 <p class="info"> jum jum jum</p>
             </div>
 
             <div class="Cat2" onclick="openPanel(this)">
-                <img src="assets/m1.jpg" alt="">
+                <img src="assets/imagenes/m1.jpg" alt="">
                 <p class="info"> jum jum jum </p>
             </div>
 
             <div class="Cat3" onclick="openPanel(this)">
-                <img src="assets/m1.jpg" alt="">
+                <img src="assets/imagenes/m1.jpg" alt="">
                 <p class="info"> jum jum jus</p>
             </div>
 
         </div>
 
 
+        <div id="overlay"></div>
+
         <div id="panel" class="panel">
             <button onclick="closePanel()">X</button>
             <p id="panelText"></p>
         </div>
+
+
     </div>
 
     <br>

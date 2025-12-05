@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Foro.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div id="header">
+        <img src="assets/logo-removebg-preview.png" alt="Logo" id="logo">
+        <h2 id="titulo">Sección de comentarios</h2>
+    </div>
+
+  <div id="contenido">  
+     <div id="ListaComentarios"></div>
+
+    <form id="Formulario">
+      <input id="nombre_usuario" type="text" placeholder="Escribe un nombre de usuario" required="">
+      <textarea id="mensaje" type="text" placeholder="Escribe tu experiencia con nuestro asistente" required=""></textarea>
+      <button type="submit" id="boton">Comentar</button>
+    </form>
+  </div>  
+
+  <script>
+    const { createClient } = supabase;
+    const supabaseUrl = "https://ksuxdxplotzrijlvatwt.supabase.co";
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtzdXhkeHBsb3R6cmlqbHZhdHd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ2ODkyMjUsImV4cCI6MjA4MDI2NTIyNX0.Xo7IOssyYI5zNHq9iTTDX9bVKjKZg07xhPsxIaCchvw";
+    const supabaseClient = createClient(supabaseUrl, supabaseKey);
+
+    const form = document.getElementById("Formulario");
+    const ListaComentarios = document.getElementById("ListaComentarios");
+
+    form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+      const nombre_usuario = document.getElementById("nombre_usuario").value;
+      const comentario = document.getElementById("mensaje").value;
+
+      const { data, error } = await supabaseClient
+        .from("Comentarios")
+        .insert([{ nombre_usuario:nombre_usuario, comentario:comentario }]);
+
+      if (!error) {
+        loadComments();
+        form.reset();
+      }
+    });
+
+    async function loadComments() {
+      const { data, error } = await supabaseClient
+        .from("Comentarios")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+      if (!error) {
+        ListaComentarios.innerHTML = data.map(c => `
+          <p><strong>${c.nombre_usuario}:</strong> ${c.comentario}</p>
+        `).join("");
+      }
+    }
+
+    // Cargar comentarios desde archivo JSON externo
+    fetch("Foro.json")
+      .then(res => res.json())
+      .then(async (Comentarios) => {
+        for (const comentario of Comentarios) {
+          await supabaseClient
+            .from("Comentarios")
+            .insert([mensaje]);
+        }
+        loadComments();
+      });
+
+    // Cargar comentarios al inicio
+    loadComments();
+  </script>
+</body>
+</html>

@@ -81,7 +81,8 @@ h1 {
 
 .barPItem a{
   text-decoration: none;
-  color: black;
+  color: white;
+  font-weight: bold;
 }
 
 /*efecto cuando pase el mouse*/
@@ -140,6 +141,58 @@ h1 {
   border-radius: 5px;
 }
 
+/*Texto del catalogo en liezo TITULO */
+
+.lienzom {
+  width: 80%;        /* para que esté centrado pero no sea tan ancho */
+  padding: 15px;
+  border-radius: 5px;
+  justify-content: justify;
+}
+
+.lienzom h2 {
+  color: white ;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  margin-top: -15px;
+}
+
+.textoCat{
+  background-color: white;
+  justify-content: center;
+  font-family: saxmono, sans-serif;
+  margin-top: -32px;
+  padding: 25px;
+}
+
+.textoCat p{
+  font-size: 20px;
+  margin-left: 120px;
+  font-weight: bold;
+}
+
+.preciosCat p {
+  font-family: saxmono, sans-serif;
+  margin-top: 10px;
+  margin: 0% 15%;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.CatLienzo{
+  background-color: white;
+  margin-top: 6%;
+  margin: 0% 5%;
+
+}
+
+.CatlienzoBack{
+  font-family: PowellAndGeary, sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+}
 
 /*Titulos*/
 
@@ -166,19 +219,7 @@ p{
   overflow: hidden; 
 }
 
-/*Los componentes del catalogo ☺ */
-
-.titulos{
-  margin-top: 5px;
-  padding: 10px;
-}
-
-.cabeza{
-  padding: 5px;
-  text-align: left;
-  font-size: 15px;
-}
-
+/*Los componentes  de  imagen del catalogo ☺ */
 
 .PImagenesC {  
   padding: 10px;
@@ -194,31 +235,46 @@ p{
 }
 
 .imagC img{
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;  
 }
 
-/*texto catalogo*/
-.textoC{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; 
-  gap: 20px; /* espacio entre imágenes */
-  margin-top: 20px;
-}
-.textCa{
-  font-family: PowellAndGeary, sans-serif;
-  text-align: center;
-  margin-top: 20px;
-  padding: 15px;
-  font-size: 25px;
+/*para el fondo oscuro*/
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  z-index: 20;
 }
 
-/*Panel de las imagenes del catalogo ☺ */
+/*para que se active la opacidad*/
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.active-image {
+  position: fixed;
+  top: 30%;
+  left: 90px;
+  width: 400px;
+  height: 400px;
+  z-index: 50;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+/*Panel de informacion de las imagenes del catalogo ☺ */
 
 .panel{
+  z-index: 60;
   position: fixed;
   top:30%;
   right:-600px;
