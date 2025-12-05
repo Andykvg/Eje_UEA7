@@ -141,12 +141,57 @@ h1 {
   border-radius: 5px;
 }
 
-/*Texto del catalogo o referencias*/
+/*Texto del catalogo en liezo TITULO */
+
+.lienzom {
+  width: 80%;        /* para que esté centrado pero no sea tan ancho */
+  padding: 15px;
+  border-radius: 5px;
+  justify-content: justify;
+}
+
+.lienzom h2 {
+  color: white ;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  margin-top: -15px;
+}
 
 .textoCat{
+  background-color: white;
   justify-content: center;
   font-family: saxmono, sans-serif;
-  margin-left: 50px;
+  margin-top: -32px;
+  padding: 25px;
+}
+
+.textoCat p{
+  font-size: 20px;
+  margin-left: 120px;
+  font-weight: bold;
+}
+
+.preciosCat p {
+  font-family: saxmono, sans-serif;
+  margin-top: 10px;
+  margin: 0% 15%;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.CatLienzo{
+  background-color: white;
+  margin-top: 6%;
+  margin: 0% 5%;
+
+}
+
+.CatlienzoBack{
+  font-family: PowellAndGeary, sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 /*Titulos*/
@@ -174,19 +219,7 @@ p{
   overflow: hidden; 
 }
 
-/*Los componentes del catalogo ☺ */
-
-.titulos{
-  margin-top: 5px;
-  padding: 10px;
-}
-
-.cabeza{
-  padding: 5px;
-  text-align: left;
-  font-size: 15px;
-}
-
+/*Los componentes  de  imagen del catalogo ☺ */
 
 .PImagenesC {  
   padding: 10px;
@@ -202,26 +235,9 @@ p{
 }
 
 .imagC img{
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;  
-}
-
-/*texto catalogo*/
-.textoC{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; 
-  gap: 20px; /* espacio entre imágenes */
-  margin-top: 20px;
-}
-.textCa{
-  font-family: PowellAndGeary, sans-serif;
-  text-align: center;
-  margin-top: 20px;
-  padding: 15px;
-  font-size: 25px;
 }
 
 /*para el fondo oscuro*/
@@ -248,14 +264,14 @@ p{
   position: fixed;
   top: 30%;
   left: 90px;
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   z-index: 50;
   object-fit: cover;
   transition: 0.4s ease;
 }
 
-/*Panel de las imagenes del catalogo ☺ */
+/*Panel de informacion de las imagenes del catalogo ☺ */
 
 .panel{
   z-index: 60;

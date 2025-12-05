@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #898d99;
+  padding: 20px;
+  margin-top: 5px;
+  margin-right: 90px;
+  margin-left: 60px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 5px 10px;
+}
+
+#logo{
+    height: 200px;
+    margin-left: -75px;
+}
+
+#titulo{
+    font-size: 45px;
+    margin: 0%;
+    color: rgb(243, 245, 246);
+}
+
+#contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    color: azure;
+
+
+}
+
+#ListaComentarios{
+    flex: 1;              
+    max-width: 55%;
+}
+
+#Formulario{
+    flex: 1;              
+    max-width: 40%;
+}
+
+#nombre_usuario{
+    width: 230px;
+    height: 60px;
+    background-color: #98ac70;
+    border: 3px solid #859763;
+    border-radius: 15px;
+}
+
+#mensaje{
+    width: 600px;
+    height: 200px;
+    background-color: #98ac70;
+    border: 3px solid #859763;
+    border-radius: 15px;
+}
+
+#boton{
+    background-color: #98ac70;
+    border: 5px solid #859763;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 15px;
+    color: azure;
+}
