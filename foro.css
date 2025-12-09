@@ -1,7 +1,14 @@
+
+@font-face {
+  font-family: "Azonix";
+  src: url("fonts/Azonix.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  margin-top: 5px;
+  margin-top: 3px;
   margin-right: 90px;
   margin-left: 60px;
 }
@@ -12,13 +19,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(assets/Ciudad\ hiperrealista.png);
+    background-image: url(assets/imagenes/fondoforo.jpg);
     background-size: cover;
     background-position: center;
     filter: blur(8px);
     z-index: -1;
-
-
 }
 
 #header {
@@ -26,9 +31,73 @@ body {
     align-items: center;
     justify-content:flex-start;
     padding: 5px 10px;
-    background-color:#1b2c27;
+    /*background-color:#1b2c27;
     border-radius: 10px;
-    border: 3px solid #001936;
+    border: 3px solid #001936;*/
+}
+
+/*para la barra de menu*/
+h1 {
+  position: absolute;
+  top: 17px; /* distancia desde arriba del carrusel */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Azonix", sans-serif;
+  font-size: 50px;
+  color: #C0D594;
+  text-align: center;
+  z-index: 10;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7); /* opcional para resaltar sobre la imagen */
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;      /* hereda color del h1 */
+}
+.logo-link h1 {
+  margin: 0;           /* evita doble margen */
+  cursor: pointer;
+}
+
+/*intento de barra plegable OJALA SALGA BIEN, pdt si funciona tu YUPI*/
+
+.barPle{
+  position: absolute;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  /*background-color: rgba(255, 255, 255, 0.8);  se sigue considerando */
+  display: flex;
+  justify-content:center;
+  z-index: 15; /* mayor que el carrusel que esta encima de que */
+  padding: 10px 0;
+}
+
+.barPItem{
+  position: relative;
+  padding: 15px 25px;
+  color: black;
+  cursor: pointer;
+}
+
+.barPItem a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/*efecto cuando pase el mouse*/
+.barPItem:hover{
+  background-color: #f1f1f13c
+}
+
+/*muestra de la ventana*/
+.barPItem:hover .interior{
+  display: block;
+}
+
+.barPItem a:hover{
+  background-color: #f0f0f0;
 }
 
 #logo{
@@ -37,10 +106,11 @@ body {
     cursor: pointer;
 }
 
-#titulo{
+#titulo {
     font-size: 45px;
-    margin: 0%;
+    margin-top: 15%;
     color: #fafafa;
+    text-align: center;
 }
 
 #contenido{
@@ -71,25 +141,26 @@ body {
 #nombre_usuario{
     width: 230px;
     height: 60px;
-    background-color:#264339;
-    border: 3px solid #1b2c27;
+    background-color:#235846;
+    border: 3px solid #235848;
     border-radius: 15px;
 }
 
 #mensaje{
     width: 600px;
     height: 200px;
-    background-color: #264339;
-    border: 3px solid #1b2c27;
+    background-color: #235846;
+    border: 3px solid #235848;
     border-radius: 15px;
 }
 
 #boton{
-    background-color: #264339;
-    border: 5px solid #1b2c27;
+    background-color: #235846;
+    border: 5px solid #235848;
     width: 100px;
     height: 100px;
     cursor: pointer;
     border-radius: 15px;
     color: #fafafa;
 }
+

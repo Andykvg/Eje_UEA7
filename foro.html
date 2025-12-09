@@ -9,19 +9,42 @@
 </head>
 
 <body>
-    <div class="background"></div>
-    <div id="header">
-      <a href="index.html"> 
-        <img src="assets/logoB.png" alt="Logo" id="logo"></a>
-        <h2 id="titulo">Sección de comentarios</h2>
-    </div>
+
+ <div class="background"></div>
+      <h1>Hybridgen</h1>
+
+      <!--intento de barra plegable-->
+      <div class="barPle">
+        <!--pestaña 1-->
+        <div class="barPItem">
+          <a href="Catalogo.html">Catalogo</a>
+        </div>
+
+        <div class="barPItem">
+          <a href="ChatB.html">Asesor</a>
+        </div>
+
+        <div class="barPItem">
+          <a href="foro.html">Foro</a>
+        </div>
+
+        <div class="barPItem">
+          <a href="NH.html">Nuestra Historia</a>
+        </div>
+
+        <div class="barPItem">
+          <a href="QS.html">Quienes Somos</a>
+        </div>
+      </div>
+
+    <h2 id="titulo">Sección de comentarios</h2>
 
   <div id="contenido">  
      <div id="ListaComentarios"></div>
 
     <form id="Formulario">
-      <input id="nombre_usuario" type="text" placeholder="Escribe un nombre de usuario" required>
-      <textarea id="mensaje" type="text" placeholder="Escribe tu experiencia con nuestro asistente" required></textarea>
+      <input id="nombre_usuario" type="text" placeholder="Escribe un nombre de usuario" required="">
+      <textarea id="mensaje" type="text" placeholder="Escribe tu experiencia con nuestro asistente" required=""></textarea>
       <button type="submit" id="boton">Comentar</button>
     </form>
   </div>  

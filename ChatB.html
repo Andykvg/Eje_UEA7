@@ -9,6 +9,38 @@
 </head>
 
 <body>
+
+    <div class="background"></div>
+    <a href="index.html" class="logo-link"> <h1>Hybridgen</h1></a>
+
+    <!--intento de barra plegable-->
+
+        <div class = "barra-color">    
+            <div class="barPle">
+                <!--pestaña 1-->
+                <div class="barPItem">
+                    <a href="Catalogo.html">Catalogo</a>
+                </div>
+
+                <div class="barPItem">
+                    <a href="ChatB.html">Asesor</a>
+                </div>
+
+                <div class="barPItem">
+                    <a href="foro.html">Foro</a>
+                </div>
+
+                <div class="barPItem">
+                    <a href="NH.html">Nuestra Historia</a>
+                </div>
+
+                <div class="barPItem">
+                    <a href="QS.html">Quienes Somos</a>
+                </div>
+            </div>
+        </div>
+
+    
     <!--script del bot -->
     <script>
         var continuallySettings = { appID: "63eykem56ynv" };
@@ -19,39 +51,7 @@
     <div id="continually-container"> </div>
 
     <!--experimentacion con lectura de audio por medio de observacion -->
-    <script>
-        const audios = [
-        document.getElementById("audio1"),
-        document.getElementById("audio2"),
-        document.getElementById("audio3")
-    ];
 
-    let index = 0; // para saber qué audio va
-
-    // Función para reproducir el siguiente audio
-    function playNextAudio() {
-        if (index < audios.length) {
-            audios[index].currentTime = 0;
-            audios[index].play();
-            index++;
-        }
-    }
-
-    // Observador que detecta mensajes nuevos del chatbot Continually
-    const observer = new MutationObserver(() => {
-        // Cambiar selector si Continually usa otro
-        const mensajes = document.querySelectorAll(".cly-message");
-
-        if (mensajes.length > 0) {
-            playNextAudio();
-        }
-    });
-
-    observer.observe(document.body, { 
-        childList: true, 
-        subtree: true 
-    });
-    </script>
 </body>
 
 </html>
