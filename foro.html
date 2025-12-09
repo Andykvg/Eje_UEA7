@@ -3,23 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Foro </title>
     <link rel="stylesheet" href="Foro.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
+
 <body>
+    <div class="background"></div>
+
     <div id="header">
-        <img src="assets/logo-removebg-preview.png" alt="Logo" id="logo">
-        <h2 id="titulo">Sección de comentarios</h2>
+
+      <h1>Hybridgen</h1>
+
+      <!--intento de barra plegable-->
+      <div class="barPle">
+        <!--pestaña 1-->
+        <div class="barPItem">
+          <a href="Catalogo.html">Catalogo</a>
+        </div>
+
+        <div class="barPItem">
+          <a href="ChatB.html">Asesor</a>
+        </div>
+
+        <div class="barPItem">
+          <a href="foro.html">Foro</a>
+        </div>
+
+        <div class="barPItem">
+          <a href="NH.html">Nuestra Historia</a>
+        </div>
+
+        <div class="barPItem">
+          <a href="QS.html">Quienes Somos</a>
+        </div>
+      </div>
     </div>
+
+    <h2 id="titulo">Sección de comentarios</h2>
 
   <div id="contenido">  
      <div id="ListaComentarios"></div>
 
     <form id="Formulario">
-      <input id="nombre_usuario" type="text" placeholder="Escribe un nombre de usuario" required="">
-      <textarea id="mensaje" type="text" placeholder="Escribe tu experiencia con nuestro asistente" required=""></textarea>
+      <input id="nombre_usuario" type="text" placeholder="Escribe un nombre de usuario" required>
+      <br>
+      <br>
+      <textarea id="mensaje" type="text" placeholder="Escribe tu experiencia con nuestro asistente" required></textarea>
+      <br>
+      <br>
       <button type="submit" id="boton">Comentar</button>
     </form>
   </div>  

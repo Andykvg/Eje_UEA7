@@ -176,7 +176,8 @@ h1 {
   text-align: right;
   font-family: passager, sans-serif;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 2;
+  font-weight: bold;
 }
 
 /*Imagenes de las tendencias */
@@ -194,6 +195,14 @@ h1 {
   width: 350px;
   height: 350px;
   object-fit: cover;
+}
+
+.tendencias-F p {
+
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 /*texto de este bloque de tendecias*/
@@ -221,6 +230,15 @@ h1 {
   height: 350px;
   object-fit: cover;
 }
+
+.mejoras-F p {
+
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 /*texto de este bloque de mejoras*/
 .mejoras-P{ 
   font-family: PowellAndGeary, sans-serif;
